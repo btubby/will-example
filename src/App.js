@@ -1,12 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import Will from "./TTSWODWill.png";
+import WillStill from "./TTSWODWill_still.png";
+import AnimatedFigure from './components/AnimatedFigure';
+import Bass from "./wodb.wav";
 
 function App() {
   return (
     <div className="App">
+
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <AnimatedFigure
+        animation={Will}
+        stillFrame={WillStill}
+        // width={"70%"}
+        sample={Bass}
+        loop={true}
+        // playOnLoad={this.state.playing_bass}
+      />
+      
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -19,6 +32,10 @@ function App() {
           Learn React
         </a>
       </header>
+
+
+
+            
     </div>
   );
 }
